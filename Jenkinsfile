@@ -5,14 +5,14 @@ pipeline {
         maven 'maven-3.9.9'
         jdk 'Open-JDK-21'
     }
-    // triggers {
-    //     GenericTrigger(
-    //         genericVariables: [],
-    //         tokenCredentialId: 'WEBHOOK_TOKEN',
-    //         regexpFilterText: '$BRANCH_NAME',
-    //         regexpFilterExpression: '^main$' //'refs/heads/' + 'master'
-    //     )
-    // }
+    triggers {
+        GenericTrigger(
+            genericVariables: [],
+            tokenCredentialId: 'WEBHOOK_TOKEN',
+            regexpFilterText: '$BRANCH_NAME',
+            regexpFilterExpression: '^main$' //'refs/heads/' + 'master'
+        )
+    }
     stages {
         stage('Checkout') {
             steps {
