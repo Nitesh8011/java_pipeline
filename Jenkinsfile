@@ -13,7 +13,7 @@ pipeline {
                     $class: 'GitSCM',
                     branches: [[name: 'main']],
                     extensions: [],
-                    userRemoteConfigs: [[url: 'https://github.com/Nitesh8011/java21-spring-boot3-rest-api-archetype.git']]
+                    userRemoteConfigs: [[url: 'https://github.com/Nitesh8011/java_pipeline.git']]
                 ])
             }
         }
